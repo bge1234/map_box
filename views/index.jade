@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}. This is the map page.
+  div#map(style="height: 300px; width: 300px; border: 1px solid #888;")
+
+  script.
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 39.757785, lng: -105.007142},
+        zoom: 15
+      });
+
+      var marker = new google.maps.Marker({
+        position: {lat: 39.757785, lng: -105.007142},
+        map: map,
+        icon: "https://maps.google.com/mapfiles/ms/icons/green-dot.png"
+      });
+    }
+
+  script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0gcQALZj7iUV0P20a9sHNQvA6amQ01b0&callback=initMap")
