@@ -8,13 +8,14 @@ block content
   script.
     var map;
     function initMap() {
+      var lat_long = "#{lat_long}";
       map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 39.757785, lng: -105.007142},
+        center: {lat: #{lat}, lng: #{lng}},
         zoom: 15
       });
 
       var marker = new google.maps.Marker({
-        position: {lat: 39.757785, lng: -105.007142},
+        position: {lat: #{lat}, lng: #{lng}},
         map: map,
         icon: "https://maps.google.com/mapfiles/ms/icons/green-dot.png"
       });
