@@ -11,7 +11,7 @@ block content
       var lat_long = "#{lat_long}";
       map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: #{lat}, lng: #{lng}},
-        zoom: 15
+        zoom: 8
       });
 
       var marker = new google.maps.Marker({
@@ -21,4 +21,4 @@ block content
       });
     }
 
-  script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0gcQALZj7iUV0P20a9sHNQvA6amQ01b0&callback=initMap")
+  script(async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap")
